@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>JobController</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>Job_Home</members>
-        <name>ApexPage</name>
-    </types>
-    <version>36.0</version>
+	<types>
+		<members>JobController</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Job_Home</members>
+		<members>Job_ThankYou</members>
+		<name>ApexPage</name>
+	</types>
+	<version>36.0</version>
 </Package>

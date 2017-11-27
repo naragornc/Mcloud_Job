@@ -55,7 +55,7 @@
             <div class="header">
                 <h4>MCloud Jobs</h4>
             </div>
-            <form id="validation">
+            <apex:form id="validation">
                 <div class="sub-header">
                     <h6>Personal Information</h6>
                 </div>
@@ -195,17 +195,24 @@
                 
                 <hr/>
                 <button class="btn btn-primary" type="submit" id="submit">Submit form</button>
-            </form>
+
+                <!-- <apex:actionFunction action="{!Submit}" name="submit" /> -->
+            </apex:form>
         </div>
         
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"/>
-        
         <script>
+
+            //function Submit(validation) {
+                //if(validation)
+                    //submit();
+            //}
+
         	$(document).ready(function() {
-                var $form = $("form")
+                var $form = $("[id$=validation]");
                 $.validator.addMethod("letters", function(value, element) {
                     return this.optional(element) || value == value.match(/^[a-zA-Z\s]*$/);
                 });
@@ -238,7 +245,11 @@
                     unhighlight: function (element, errorClass, validClass) {
                         $( element ).removeClass( "has-error" );
                     }
-                }); 
+                });
+
+                //$("#submit").click(function() {
+                    //Submit($form.valid());
+                //}); 
             });
         </script>
     </body>
